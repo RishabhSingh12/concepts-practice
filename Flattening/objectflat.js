@@ -19,3 +19,4 @@ let obj = {
 };
 
 // function to flatten obj recursively
+console.log({ ...obj });
