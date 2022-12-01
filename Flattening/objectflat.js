@@ -22,13 +22,20 @@ let obj = {
 const flattenobj = (ob) => {
   let newObj = {};
 
-  Object.keys(ob).forEach((ele) => {
-    if (typeof ele === "object") {
-      flattenobj(ele);
-    }
-  });
+  const getResult = (ob) => {
+    Object.keys(ob).forEach((ele) => {
+      if (typeof [ele] === "object") {
+        flattenobj(ele);
+      } else {
+        newObj[ele] = ob[ele];
+      }
+    });
+  };
+  getResult(ob);
+
+  return newObj;
 };
 
-flattenobj(obj);
+console.log(flattenobj(obj));
 
 // console.log({ ...obj });
