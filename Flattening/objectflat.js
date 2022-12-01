@@ -19,4 +19,12 @@ let obj = {
 };
 
 // function to flatten obj recursively
-console.log({ ...obj });
+const flattenobj = (ob) => {
+  let newObj = {};
+
+  console.log(Object.keys(ob));
+};
+
+flattenobj(obj);
+
+// console.log({ ...obj });
