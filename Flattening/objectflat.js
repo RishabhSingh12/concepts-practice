@@ -1,5 +1,6 @@
 // Flattening of an object recursively
 
+// Example nested object
 let obj = {
   name: "abc",
   nos: {
@@ -24,8 +25,8 @@ const flattenobj = (ob) => {
 
   const getResult = (ob) => {
     Object.keys(ob).forEach((ele) => {
-      if (typeof [ele] === "object") {
-        flattenobj(ele);
+      if (typeof ob[ele] === "object") {
+        getResult(ob[ele]);
       } else {
         newObj[ele] = ob[ele];
       }
