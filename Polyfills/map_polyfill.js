@@ -1,5 +1,6 @@
 // polyfill for the array map method
 
+// custom map function
 Array.prototype.myMap = function (cb) {
   let resArr = [];
   for (let i = 0; i < this.length; i++) {
@@ -13,4 +14,5 @@ const result = arr.myMap((ele, idx, arr) => {
   return ele * 2;
 });
 
+// printing the result
 console.log(result);
