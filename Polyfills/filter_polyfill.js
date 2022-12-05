@@ -13,6 +13,7 @@ Array.prototype.myFilter = function (cb) {
   return resArr;
 };
 
+// result of custom filter function
 let result = arrch.myFilter((ele, idx, arrch) => {
   //   let ascii = ele.charCodeAt(0) === 97;
   return ele.charCodeAt(0) === 102;
