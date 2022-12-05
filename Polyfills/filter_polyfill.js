@@ -12,3 +12,9 @@ Array.prototype.myFilter = function (cb) {
   }
   return resArr;
 };
+
+let result = arrch.myFilter((ele, idx, arrch) => {
+  //   let ascii = ele.charCodeAt(0) === 97;
+  return ele.charCodeAt(0) === 102;
+});
+console.log(result);
