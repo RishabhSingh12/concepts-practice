@@ -7,6 +7,10 @@ Array.prototype.myreduce = function (cb, intialValue) {
   let res = intialValue;
 
   for (let i = 0; i < this.length; i++) {
-    res = res || this[i];
+    if (!res) {
+      res = this[i];
+    } else {
+      cb(res, this[i], i, this);
+    }
   }
 };
