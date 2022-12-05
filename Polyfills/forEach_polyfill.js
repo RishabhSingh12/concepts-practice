@@ -9,3 +9,5 @@ Array.prototype.myForEach = function (cb) {
     cb(this[i], i, this);
   }
 };
+
+arr.myForEach((value, index, array) => console.log(value));
