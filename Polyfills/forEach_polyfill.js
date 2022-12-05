@@ -10,4 +10,4 @@ Array.prototype.myForEach = function (cb) {
   }
 };
 
-arr.myForEach((value, index, array) => console.log(value));
+arr.myForEach((value, index, array) => console.log(value * 2));
