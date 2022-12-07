@@ -16,4 +16,4 @@ Array.prototype.myFind = function (cb) {
 
 // test
 const result = arr.myFind((ele, idx) => ele % 13 === 0);
-console.log(result);
+console.log(result); // result = 39
