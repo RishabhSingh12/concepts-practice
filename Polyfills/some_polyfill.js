@@ -1,7 +1,7 @@
 // polyfill for array some method
 
 // example array
-let array = ["alex", "sharon", "bob", "alexa"];
+let arr = ["alex", "sharon", "bob", "alexa"];
 
 // polyfill implementation
 Array.prototype.mySome = function (cb) {
@@ -14,3 +14,5 @@ Array.prototype.mySome = function (cb) {
 };
 
 // testing polyfill
+const result1 = arr.mySome((ele, idx) => ele.length === 5);
+console.log(result1);
