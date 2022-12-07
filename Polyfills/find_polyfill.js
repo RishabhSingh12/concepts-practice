@@ -10,6 +10,10 @@ Array.prototype.myFind = function (cb) {
     if (result) {
       return this[i];
     }
-    return undefined;
   }
+  return undefined;
 };
+
+// test
+const result = arr.myFind((ele, idx) => ele % 13 === 0);
+console.log(result);
