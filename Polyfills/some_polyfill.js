@@ -16,3 +16,5 @@ Array.prototype.mySome = function (cb) {
 // testing polyfill
 const result1 = arr.mySome((ele, idx) => ele.length === 5);
 console.log(result1);
+const result2 = arr.mySome((ele, idx) => ele === "alix");
+console.log(result2);
