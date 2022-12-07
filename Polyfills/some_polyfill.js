@@ -10,4 +10,7 @@ Array.prototype.mySome = function (cb) {
       return true;
     }
   }
+  return false;
 };
+
+// testing polyfill
