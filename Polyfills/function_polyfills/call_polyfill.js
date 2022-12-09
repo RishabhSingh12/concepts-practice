@@ -20,3 +20,6 @@ Function.prototype.myCall = function (context = {}, ...args) {
   context.fn = this;
   context.fn(...args);
 };
+
+// example data
+purchaseCar.myCall(car, 500000);
