@@ -19,6 +19,10 @@ Function.prototype.myBind = function (context = {}, ...args) {
 
   context.fn = this;
   return function (...newArgs) {
-    context.fn(...args, ...newArgs);
+    return context.fn(...args, ...newArgs);
   };
 };
+
+// test
+const newres = purchaseCar.myBind(car);
+console.log(newres("rs 500000"));
