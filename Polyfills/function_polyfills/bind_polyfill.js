@@ -10,3 +10,10 @@ let car = {
 function purchaseCar(price) {
   console.log(`I purchased ${this.color} - ${this.company} for Rs ${price}`);
 }
+
+// implementation
+Function.prototype.myBind = function (context = {}, ...args) {
+  if (typeof this !== "function") {
+    throw new Error(this + "cannot be bound as it's not callable");
+  }
+};
