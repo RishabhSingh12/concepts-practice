@@ -1,5 +1,6 @@
 // bind polyfill implementation
 
+// example object
 let car = {
   color: "red",
   company: "rivian",
