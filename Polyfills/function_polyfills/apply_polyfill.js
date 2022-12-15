@@ -26,4 +26,4 @@ Function.prototype.myApply = function (context = {}, args = []) {
 };
 
 // example implementation
-purchaseCar.myCall(car, [500000]);
+purchaseCar.myApply(car, [500000]);
