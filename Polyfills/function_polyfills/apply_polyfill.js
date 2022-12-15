@@ -24,3 +24,6 @@ Function.prototype.myApply = function (context = {}, args = []) {
   context.fn = this;
   context.fn(...args);
 };
+
+// example implementation
+purchaseCar.myCall(car, [500000]);
