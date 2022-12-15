@@ -12,3 +12,11 @@ function purchaseCar(price) {
 }
 
 // Custom Implementation
+Function.prototype.myApply = function (context = {}, args = []) {
+  if (typeof this !== "function") {
+    throw new Error(this + "It's not callable");
+  }
+
+  context.fn = this;
+  context.fn(...args);
+};
