@@ -10,3 +10,5 @@ let car = {
 function purchaseCar(price) {
   console.log(`I purchased ${this.color} - ${this.company} for Rs ${price}`);
 }
+
+// Custom Implementation
