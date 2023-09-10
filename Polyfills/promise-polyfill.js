@@ -56,8 +56,8 @@ function customPromise(executor) {
   executor(resolve, reject);
 }
 
-//test function replicating an async behaviour
-const doWork = (res, rej) => {
+//executor function replicating an async behaviour
+const executorFn = (res, rej) => {
   if (2 === 2) {
     setTimeout(() => {
       res("Promise Resolved");
@@ -70,7 +70,7 @@ const doWork = (res, rej) => {
 };
 
 //creating instance of the custom promise
-const greetMsg = new customPromise(doWork);
+const greetMsg = new customPromise(executorFn);
 
 greetMsg.then((val) => console.log(val));
 greetMsg.catch((err) => console.log(err));
