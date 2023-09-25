@@ -37,10 +37,27 @@ function task(time) {
 }
 
 //for failure case
+function task1(time) {
+  return new Promise((res, rej) => {
+    if (time < 3000) {
+      rej("Rejected");
+    } else {
+      res(time);
+    }
+  });
+}
 
 const taskList = [task(1000), task(5000), task(3000)];
+const taskList1 = [task1(5000), task1(1000), task1(3000)];
 
 myPromiseAll(taskList)
+  .then((res) => {
+    console.log("All results", res);
+  })
+  .catch(console.error);
+
+//for error case
+myPromiseAll(taskList1)
   .then((res) => {
     console.log("All results", res);
   })
